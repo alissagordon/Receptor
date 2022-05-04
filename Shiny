@@ -65,7 +65,7 @@ ui <- fluidPage(
                                 sliderInput("recruit", label = h6("Years Recruitment"), min = 1, 
                                             max = 5, value = 3, step=0.5),
                                 
-                                numericInput('sample', label=h6("Starting guess for n (subgroup size). "), value=170),
+                                numericInput('sample', label=h6("Starting guess for n (subgroup size). "), value=125),
                                 sliderInput('precision',label=h6("Precision"), min=0, max=0.1, value=0.005)
                          ),
                          column(4,
