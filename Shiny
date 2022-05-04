@@ -26,22 +26,22 @@ ui <- fluidPage(
                 "Instructions",
                 
                 p("       "),
-                p(strong("Input Definitions"),
-                  
-                  p( "Primary Median - Median survival for patients treated based on the tumor receptors of their primary tumor."
-                  ),
-                  p("Metastatic Median - Median survival for patients treated based on the tumor receptors of their metastatic tumor."),
-                  p("Alpha - Acceptable Type I error risk."),
-                  p("Power - 1 minus the acceptable Type II error risk.")
-                ),
-                p("Years Trial - Number of years trial will follow-up with patients from the start of the trial."),
-                p("Years Recruiting - Number of years spent recruiting people for the study. Must be less than years of trial."),
-                p("Precision - The margin of error for estimating power. Smaller error requires longer run time."),
-                p("Starting Guess for N - Start low and/or leave at current setting."),
-                p("Replications - Number of times you would like to run the simulation before finding the power. We recommend setting this low initially for time. Set > 10,000 when ready for the final answer. 10,000 can take >15 minutes.
+                 h4(strong("Input Definitions")),
+                      
+                      p( strong("Primary Median")," - Median survival for patients treated based on the tumor receptors of their primary tumor."
+                      ),
+                      p(strong("Metastatic Median")," - Median survival for patients treated based on the tumor receptors of their metastatic tumor."),
+                      p(strong("Alpha")," - Acceptable Type I error risk."),
+                      p(strong("Power")," - 1 minus the acceptable Type II error risk.")
+                    ,
+                    p(strong("Years Trial")," - Number of years trial will follow-up with patients from the start of the trial."),
+                    p(strong("Years Recruiting")," - Number of years spent recruiting people for the study. Must be less than years of trial."),
+                    p(strong("Precision")," - The margin of error for estimating power. Smaller error requires longer run time."),
+                    p(strong("Starting Guess for N")," - Start low and/or leave at current setting."),
+                    p(strong("Replications")," - Number of times you would like to run the simulation before finding the power. We recommend setting this low initially for time. Set > 10,000 when ready for the final answer. 10,000 can take >15 minutes.
 "),
-                p(""),
-                p(strong("Additional Notes:")),
+                    p(""),
+                    h4(strong("Additional Notes:")),
                 p("Click the Calculation tab to enter Inputs. Click \"Get My Sample Size\" when ready. "),
                 p(strong("Inputs are preset to current assumptions")),
                 p("The answer is the sample size for each arm of the trial. "),
