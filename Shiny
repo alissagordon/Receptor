@@ -106,7 +106,7 @@ ui <- fluidPage(
                        p("    "),
                        p("Completed under the guidance of Dr. Allen Pannell"),
                        p("Initial code and merging done by Alissa Gordon"),
-                       p(strong("A special thank you to the following contributors:")),
+                        p(strong("A special thank you to the following BAS479 student contributors:")),
                        p("Abigail Grace Banas"),
                        p("Adrian Batt"),
                        p("Brayden Campbell"),
