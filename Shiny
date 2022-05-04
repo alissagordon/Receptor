@@ -12,7 +12,7 @@ library(survminer)
 ui <- fluidPage(  
   useShinyjs(),
   titlePanel(
-    h1("Sample Size Calculator", align="center")
+    h1("The RECEPTOR Trial - Sample Size Calculator", align="center")
   ),
   
   
