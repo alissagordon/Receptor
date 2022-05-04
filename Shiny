@@ -78,7 +78,7 @@ ui <- fluidPage(
                                             max = 10, value = 7, step=0.5),
                                 
                                 
-                                numericInput('reps', label=h6('Replications' ), value="N/A")
+                                numericInput('reps', label=h6('Replications' ), value="100")
                                 # ui inputs here, they show up in a gray box on left side by default,
                                 #does not start until submit button is clicked
                                 
