@@ -37,7 +37,7 @@ ui <- fluidPage(
                     p(strong("Years Trial")," - Number of years trial will follow-up with patients from the start of the trial."),
                     p(strong("Years Recruiting")," - Number of years spent recruiting people for the study. Must be less than years of trial."),
                     p(strong("Precision")," - The margin of error for estimating power. Smaller error requires longer run time."),
-                    p(strong("Starting Guess for N")," - Start low and/or leave at current setting."),
+                    p(strong("Starting Guess for n")," - n for each arm of the trial. Start low and/or leave at current setting."),
                     p(strong("Replications")," - Number of times you would like to run the simulation before finding the power."),
                     p(HTML('&nbsp;'),HTML('&nbsp;'),HTML('&nbsp;'),HTML('&nbsp;'),HTML('&nbsp;'),HTML('&nbsp;'),"We recommend setting this low initially for time. Set > 10,000 when ready for the final answer. 10,000 can take >15 minutes."),
                     p(HTML('&nbsp;'),""), 
@@ -65,7 +65,7 @@ ui <- fluidPage(
                                 sliderInput("recruit", label = h6("Years Recruitment"), min = 1, 
                                             max = 5, value = 3, step=0.5),
                                 
-                                numericInput('sample', label=h6("Starting guess for n (subgroup size). "), value=125),
+                                numericInput('sample', label=h6("Starting guess for n (each arm size). "), value=125),
                                 sliderInput('precision',label=h6("Precision"), min=0, max=0.1, value=0.005)
                          ),
                          column(4,
@@ -84,7 +84,7 @@ ui <- fluidPage(
                                 
                          )),
                        column(4,
-                              h4("Calculated Sample Size n (for an arm/subgroup):"),
+                              h4("Calculated Sample Size n (for each arm of the trial):"),
                               verbatimTextOutput(('n'), placeholder=TRUE),
                               tags$head(tags$style(HTML("
                             #n {
