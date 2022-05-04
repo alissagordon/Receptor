@@ -26,7 +26,7 @@ ui <- fluidPage(
                 "Instructions",
                 
                 p("       "),
-                p(strong("Input Definitions - Preset to current assumptions"),
+                p(strong("Input Definitions"),
                   
                   p( "Primary Median - Median survival for patients treated based on the tumor receptors of their primary tumor."
                   ),
@@ -43,6 +43,7 @@ ui <- fluidPage(
                 p(""),
                 p(strong("Additional Notes:")),
                 p("Click the Calculation tab to enter Inputs. Click \"Get My Sample Size\" when ready. "),
+                p(strong("Inputs are preset to current assumptions"),
                 p("The answer is the sample size for each arm of the trial. "),
                 p("The progress meter at the bottom right will indicate the simulation is running and give you some idea of how long it may take."),
  p(""),
