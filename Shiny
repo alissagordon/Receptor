@@ -47,7 +47,7 @@ ui <- fluidPage(
                  p("The answer is the sample size for", strong("each")," arm of the trial. "),
                 p("The progress meter at the bottom right will indicate the simulation is running and give you some idea of how long it may take."),
  p(""),
-                p("Email any feedback and questions to tapjr@outlook.com. ")),
+                p("Email any feedback and questions to tpannell@utk.edu ")),
               tabPanel("Calculation", 
                      
                        #inputs
