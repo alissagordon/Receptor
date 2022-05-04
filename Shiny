@@ -42,7 +42,7 @@ ui <- fluidPage(
 "),
                     p(""),
                     h4(strong("Additional Notes:")),
-                p("Click the Calculation tab to enter Inputs. Click \"Get My Sample Size\" when ready. "),
+                p("Click the", strong(" Calculation")," tab to enter Inputs. Click \"Get My Sample Size\" when ready. "),
                 p(strong("Inputs are preset to current assumptions")),
                  p("The answer is the sample size for", strong("each")," arm of the trial. "),
                 p("The progress meter at the bottom right will indicate the simulation is running and give you some idea of how long it may take."),
