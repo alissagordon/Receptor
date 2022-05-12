@@ -338,7 +338,7 @@ KM <- ifelse(KMP <= 0.15, "Sig", "NotSig")
 ## Cox Regression ##
 cox.mod <- coxph( Surv(d.sorted$newvalue,d.sorted$statusC) ~ d.sorted$arm*d.sorted$fivegroups)
 mallon<- summary(cox.mod)
-IT<- ifelse(mallon$coefficients[3,5] <= 0.15, "Sig", "NotSig")
+IT<- ifelse(mallon$coefficients[3,5] <= 0.10, "Sig", "NotSig")
 MCox<- mallon$coefficients[3,5]
 
 
