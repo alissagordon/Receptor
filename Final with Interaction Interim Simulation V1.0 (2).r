@@ -352,7 +352,7 @@ ST <- data.frame(c((STBase[1,3]-STBase[2,3]),(STBase[3,3]-STBase[4,3]), (STBase[
                    (STBase[13,3]-STBase[14,3]),(STBase[15,3]-STBase[16,3]),(STBase[17,3]-STBase[18,3]),
                    (STBase[19,3]-STBase[20,3]),(STBase[21,3]-STBase[22,3]),(STBase[23,3]-STBase[24,3])))
 ST$Sign <- ifelse(ST[,1]>=0,"+","-")
-STTest <- ifelse(max(table(ST$Sign)) > 10,"Fail", "Pass")
+STTest <- ifelse(max(table(ST$Sign)) > 10,"Sig", "NotSig")
 
 
 ## Key Output ##
@@ -360,10 +360,11 @@ T1<- data.frame(rchisq$p.value, KMP, max(table(ST$Sign)), MCox, RST, KM, STTest,
 
 
 ## Logic
-T1$Continue <- ifelse((KM == "Sig" | RST == "Sig" | STTest == "Fail" )&& IT == "NotSig", "Stop", "Continue")
+T1$Continue <- ifelse((KM == "Sig" | RST == "Sig" | STTest == "Sig" )&& IT == "NotSig", "Stop", "Continue")
 
 T1Reps[p,] <- T1
 
 } ## End of for loop
 
-
+## Visualize the pattern in Sig NotSig data
+Output = aggregate(KM ~ Recist +KM.1  +ST.1  +Cox  ,data = T1Reps, FUN = length, drop = FALSE)
