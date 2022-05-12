@@ -272,8 +272,10 @@ STTest <- ifelse(max(table(ST$Sign)) > 10,"Sig", "NotSig")
 T1<- data.frame(rchisq$p.value, KMP, max(table(ST$Sign)), MCox, RST, KM, STTest, IT)
 
 
-## Logic
-T1$Continue <- ifelse((KM == "Sig" | RST == "Sig" | STTest == "Sig" )&& IT == "NotSig", "Stop", "Continue")
+  
+  ## Logic  NEW based initial runs
+  T1$Continue <- ifelse(IT == "Sig", "Continue",
+                        ifelse(IT == "NotSig" && STTest == "Sig" , "Stop","Futility?"))
 
 T1Reps[p,] <- T1
 
