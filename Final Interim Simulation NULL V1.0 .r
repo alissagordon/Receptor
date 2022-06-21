@@ -1,5 +1,7 @@
 #Code by Alissa Gordon and Tyler Dykes
 
+## Null and Delta Code ###############
+
 ## Required Packages ##
 library(e1071)
 library(survival)
@@ -18,14 +20,14 @@ library(dplyr)
 T1Reps <- data.frame("RCST" = NA,"KM"= NA,"ST"= NA,"COX"= NA, "Recist"= NA, "KM"= NA, "ST"= NA,"Cox"= NA, "Continue?"= NA)
 
 
-for (p in 1:10) {
+for (p in 1:1000) {
   
 
 
 ## Key inputs ##
 n<- 170 #Using N=170 to distribute the amount of patients evening between both treatments.
-pmedian<- 1 #Primary Median Lifespan
-mmedian<- 2 #Metastatic Median Lifespan
+pmedian<- 3 #Primary Median Lifespan                        ### Change both to 2.5 for NULL
+mmedian<- 2 #Metastatic Median Lifespan                     ### Change both to 2.5 for NULL
 plambda<-log(2)/pmedian #finds lambda for which median of exp curve would be pmedian
 mlambda<-log(2)/mmedian #finds lambda for which median of exp curve would be mmedian
 alpha<-0.1 #Number of times to run entire simulation
