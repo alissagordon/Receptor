@@ -1,5 +1,7 @@
 #Code by Alissa Gordon and Tyler Dykes
 
+# INTERACTION Code ################
+
 ## Required Packages ##
 library(e1071)
 library(survival)
@@ -13,10 +15,11 @@ library(fpp3)
 library(survRM2)
 ##install.packages('dplyr')
 library(dplyr)
+
 T1Reps <- data.frame("RCST" = NA,"KM"= NA,"ST"= NA,"COX"= NA, "Recist"= NA, "KM"= NA, "ST"= NA,"Cox"= NA, "Continue?"= NA) ## creating column names for final data frame.
 
 
-for (p in 1:100) {
+for (p in 1:1000) {
   
 
 
